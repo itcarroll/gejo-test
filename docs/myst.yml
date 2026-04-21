@@ -1,0 +1,15 @@
+# See docs at: https://mystmd.org/guide/frontmatter
+version: 1
+project:
+  id: 304c988f-a3f3-4f93-9929-d3d74e47971f
+  # title:
+  # description:
+  # keywords: []
+  # authors: []
+  github: https://github.com/itcarroll/gejo-test
+  # To autogenerate a Table of Contents, run "myst init --write-toc"
+site:
+  template: book-theme
+  # options:
+  #   favicon: favicon.ico
+  #   logo: site_logo.png

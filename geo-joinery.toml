@@ -1,0 +1,7 @@
+[project]
+name = "gejo-test"
+maintainers = [
+  { username = "itcarroll" },
+]
+catalogs = [
+]
