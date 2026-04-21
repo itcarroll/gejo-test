@@ -1,0 +1,19 @@
+name: Setup project
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        description: Project name (defaults to repo name).
+        required: false
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v6
+      - name: Initialize geo-joinery
+        uses: geo-joinery/gejo-core/.github/actions/setup@main
+        with:
+          name: ${{ inputs.name || github.event.repository.name }}
