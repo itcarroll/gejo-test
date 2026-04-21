@@ -1,0 +1,17 @@
+name: Reproduce matchup dataset
+on:
+  push:
+    branches:
+      - main
+permissions: {}
+concurrency:
+  group: reproduce
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v6
+      - uses: geo-joinery/gejo-core/.github/actions/reproduce@main
