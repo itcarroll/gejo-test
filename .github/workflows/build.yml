@@ -13,5 +13,7 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v6
-      - uses: geo-joinery/gejo-core/.github/actions/reproduce@main
+      - name: Clone repository
+        uses: actions/checkout@v6
+      - name: Run data processing 
+        uses: geo-joinery/gejo-core/.github/actions/reproduce@main
